@@ -1,0 +1,80 @@
+<launch>
+  <param name="robot_description" command="cat $(find hrp2_14_description)/urdf/hrp2_14_capsule.urdf"/>
+  <param name="wall_description" command="cat $(find room_description)/urdf/walls.urdf"/>
+  <param name="room_description" command="cat $(find room_description)/urdf/room.urdf"/>
+    
+    
+  
+  <node name="room_base_link_broadcaster"
+    pkg="tf" type="static_transform_publisher"  
+    args="0 0 0 0 0 0 /map /room_base 200"/>  
+
+  <node name="desk_base_link_broadcaster"
+    pkg="tf" type="static_transform_publisher"  
+    args="3.2 -2.5 1 0 0 0 /room_base /desk_base 200"/>  
+  
+  <node name="pc_base_link_broadcaster"
+    pkg="tf" type="static_transform_publisher"  
+    args="3 -2 1.2 0 0 0 /room_base /pc_base 200"/>   
+  
+  <node name="lamp_base_link_broadcaster"
+    pkg="tf" type="static_transform_publisher"  
+    args="-5 -4 0 0 0 0 /room_base /lamp_base 200"/> 
+
+  <node name="chair_tmp_base_link_broadcaster"
+    pkg="tf" type="static_transform_publisher"  
+    args="2 -2 0 0 0 0 /room_base /chair_tmp_base 200"/> 
+
+  <node name="chair_base_link_broadcaster"
+    pkg="tf" type="static_transform_publisher"  
+    args="0 0 1 0 0 0 /chair_tmp_base /chair_base 200"/> 
+    
+  <node name="armchair_base_link_broadcaster"
+    pkg="tf" type="static_transform_publisher"  
+    args="-5 -5 1 0 0 0 /room_base /armchair_base 200"/>          
+
+  <node name="books_base_link_broadcaster"
+    pkg="tf" type="static_transform_publisher"  
+    args="1 -5 2 0 0 0 /room_base /books_base 200"/>   
+
+  <node name="commode_base_link_broadcaster"
+    pkg="tf" type="static_transform_publisher"  
+    args="1 -5 1 0 0 0 /room_base /commode_base 200"/> 
+  
+  <node name="table_base_link_broadcaster"
+    pkg="tf" type="static_transform_publisher"  
+    args="2 1 1 0 0 0 /room_base /table_base 200"/> 
+
+  <node name="wall_link_broadcaster"
+        pkg="tf" type="static_transform_publisher"  
+        args="0 0 0 0 0 0 /map /wall_base 200"/>
+  <node name="wall_one_broadcaster"
+        pkg="tf" type="static_transform_publisher"  
+        args="0 0 0 0 0 0 /wall_base /l_wall_one 200"/>
+  <node name="wall_two_broadcaster"
+        pkg="tf" type="static_transform_publisher"  
+        args="0 0 0 0 0 0 /wall_base /l_wall_two 200"/>
+  <node name="wall_three_broadcaster"
+        pkg="tf" type="static_transform_publisher"  
+        args="0 0 0 0 0 0 /wall_base /l_wall_three 200"/> 
+  <node name="wall_four_broadcaster"
+        pkg="tf" type="static_transform_publisher"  
+        args="0 0 0 0 0 0 /wall_base /l_wall_four 200"/> 
+  
+  <node name="odom_link_broadcaster"
+    pkg="tf" type="static_transform_publisher"  
+    args="0 0 0 0 0 0 /map /odom 200"/>
+    
+  <node name="robot_state_publisher"
+	pkg="robot_state_publisher"
+	type="state_publisher"
+	respawn="true">
+    <param name="tf_prefix" value="" />
+  </node>
+  
+  <node name="rviz"
+	pkg="rviz"
+	type="rviz"
+	respawn="false">
+  </node>
+</launch>
