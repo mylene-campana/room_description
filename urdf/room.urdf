@@ -20,11 +20,6 @@
   </material>
      
   <link name="room_base">
-    <inertial>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="1.0" />
-      <inertia  ixx="1.0" ixy="0.0"  ixz="0.0"  iyy="100.0"  iyz="0.0"  izz="1.0" />
-    </inertial>
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
@@ -47,20 +42,15 @@
   </joint>
         
   <link name="desk_base">
-    <inertial>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="1.0" />
-      <inertia  ixx="1.0" ixy="0.0"  ixz="0.0"  iyy="100.0"  iyz="0.0"  izz="1.0" />
-    </inertial>
     <visual>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <origin xyz="2.3 -2.3 0" rpy="0 0 -1.570796327"/>
       <geometry>
         <mesh filename="package://room_description/meshes/bureauAngulaire_sized.dae"/>
       </geometry>
       <material name="Blue"/>
     </visual>
     <collision>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <origin xyz="2.3 -2.3 0" rpy="0 0 -1.570796327"/>
       <geometry>
         <mesh filename="package://room_description/meshes/bureauAngulaire_sized.dae"/>
       </geometry>
@@ -75,20 +65,15 @@
   </joint>
         
   <link name="pc_base">
-    <inertial>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="1.0" />
-      <inertia  ixx="1.0" ixy="0.0"  ixz="0.0"  iyy="100.0"  iyz="0.0"  izz="1.0" />
-    </inertial>
     <visual>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <origin xyz="2.3 -1.7 1.04" rpy="0 0 -1.570796327"/>
       <geometry>
         <mesh filename="package://room_description/meshes/pc_portable_sized2.dae"/>
       </geometry>
       <material name="Black"/>
     </visual>
     <collision>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <origin xyz="2.3 -1.7 1.04" rpy="0 0 -1.570796327"/>
       <geometry>
         <mesh filename="package://room_description/meshes/pc_portable_sized2.dae"/>
       </geometry>
@@ -103,19 +88,14 @@
   </joint>
         
   <link name="lamp_base">
-    <inertial>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="1.0" />
-      <inertia  ixx="1.0" ixy="0.0"  ixz="0.0"  iyy="100.0"  iyz="0.0"  izz="1.0" />
-    </inertial>
     <visual>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <origin xyz="-0.4 -2.3 0" rpy="0 0 0"/>
       <geometry>
         <mesh filename="package://room_description/meshes/lampe_a_pied_sized2.dae"/>
       </geometry>
     </visual>
     <collision>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <origin xyz="-0.4 -2.3 0" rpy="0 0 0"/>
       <geometry>
         <mesh filename="package://room_description/meshes/lampe_a_pied_sized2.dae"/>
       </geometry>
@@ -130,48 +110,21 @@
   </joint>
         
   <link name="armchair_base">
-    <inertial>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="1.0" />
-      <inertia  ixx="1.0" ixy="0.0"  ixz="0.0"  iyy="100.0"  iyz="0.0"  izz="1.0" />
-    </inertial>
     <visual>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <origin xyz="1.3 1.3 0" rpy="0 0 -1.570796327"/>
       <geometry>
         <mesh filename="package://room_description/meshes/fauteuil_sized2.dae"/>
       </geometry>
     </visual>
     <collision>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <origin xyz="1.3 1.3 0" rpy="0 0 -1.570796327"/>
       <geometry>
         <mesh filename="package://room_description/meshes/fauteuil_sized2.dae"/>
       </geometry>
     </collision>
   </link>
-  
-  
-  <!--<joint name="j_chair_tmp" type="fixed">
-    <parent link="room_base"/>
-    <child link="chair_tmp_base"/>
-    <origin rpy="0 0 0" xyz="0 0 0"/>
-  </joint>
-        
-  <link name="chair_tmp_base">
-    <inertial>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="1.0" />
-      <inertia  ixx="1.0" ixy="0.0"  ixz="0.0"  iyy="100.0"  iyz="0.0"  izz="1.0" />
-    </inertial>
-    <visual>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <geometry>
-        <cylinder length="0.1" radius="0.005"/>
-      </geometry>
-      <material name="Red"/>
-    </visual>
-  </link>-->
-  
-  
+
+
   <joint name="j_chair" type="fixed">
     <parent link="room_base"/>
     <child link="chair_base"/>
@@ -179,19 +132,14 @@
   </joint>
         
   <link name="chair_base">
-    <inertial>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="1.0" />
-      <inertia  ixx="1.0" ixy="0.0"  ixz="0.0"  iyy="100.0"  iyz="0.0"  izz="1.0" />
-    </inertial>
     <visual>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <origin xyz="1.3 -1.7 0" rpy="0 0 1.570796327"/>
       <geometry>
         <mesh filename="package://room_description/meshes/chaise_bureau2_sized2.dae"/>
       </geometry>
     </visual>
     <collision>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <origin xyz="1.3 -1.7 0" rpy="0 0 1.570796327"/>
       <geometry>
         <mesh filename="package://room_description/meshes/chaise_bureau2_sized2.dae"/>
       </geometry>
@@ -206,21 +154,17 @@
   </joint>
         
   <link name="table_base">
-    <inertial>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="1.0" />
-      <inertia  ixx="1.0" ixy="0.0"  ixz="0.0"  iyy="100.0"  iyz="0.0"  izz="1.0" />
-    </inertial>
     <visual>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <origin xyz="0 1.3 0.15" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://room_description/meshes/table_verre_sized.dae"/>
+        <!--<mesh filename="package://room_description/meshes/table_verre_sized.dae"/>-->
+        <box size="0.9 1.5 0.3" />
       </geometry>
     </visual>
     <collision>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <origin xyz="0 1.3 0.15" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://room_description/meshes/table_verre_sized.dae"/>
+       <box size="0.9 1.5 0.3" />
       </geometry>
     </collision>
   </link>
@@ -233,19 +177,14 @@
   </joint>
         
   <link name="commode_base">
-    <inertial>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="1.0" />
-      <inertia  ixx="1.0" ixy="0.0"  ixz="0.0"  iyy="100.0"  iyz="0.0"  izz="1.0" />
-    </inertial>
     <visual>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <origin xyz="-2.5 -1.1 0" rpy="0 0 1.570796327"/>
       <geometry>
         <mesh filename="package://room_description/meshes/commode_sized2.dae"/>
       </geometry>
     </visual>
     <collision>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <origin xyz="-2.5 -1.1 0" rpy="0 0 1.570796327"/>
       <geometry>
         <mesh filename="package://room_description/meshes/commode_sized2.dae"/>
       </geometry>
@@ -260,19 +199,14 @@
   </joint>
         
   <link name="books_base">
-    <inertial>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="1.0" />
-      <inertia  ixx="1.0" ixy="0.0"  ixz="0.0"  iyy="100.0"  iyz="0.0"  izz="1.0" />
-    </inertial>
     <visual>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <origin xyz="-2.3 -1.3 1" rpy="0 0 1.570796327"/>
       <geometry>
         <mesh filename="package://room_description/meshes/vieux_livres_sized.dae"/>
       </geometry>
     </visual>
     <collision>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <origin xyz="-2.3 -1.3 1" rpy="0 0 1.570796327"/>
       <geometry>
         <mesh filename="package://room_description/meshes/vieux_livres_sized.dae"/>
       </geometry>
@@ -287,20 +221,15 @@
   </joint>
         
   <link name="deskLamp_base">
-    <inertial>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="1.0" />
-      <inertia  ixx="1.0" ixy="0.0"  ixz="0.0"  iyy="100.0"  iyz="0.0"  izz="1.0" />
-    </inertial>
     <visual>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <origin xyz="2.6 -2.1 0.98" rpy="0 0 -1.570796327"/>
       <geometry>
         <mesh filename="package://room_description/meshes/desklamp_sized2.dae"/>
       </geometry>
       <material name="Black"/>
     </visual>
     <collision>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <origin xyz="2.6 -2.1 0.98" rpy="0 0 -1.570796327"/>
       <geometry>
         <mesh filename="package://room_description/meshes/desklamp_sized2.dae"/>
       </geometry>
@@ -315,20 +244,15 @@
   </joint>
         
   <link name="beer_base">
-    <inertial>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="1.0" />
-      <inertia  ixx="1.0" ixy="0.0"  ixz="0.0"  iyy="100.0"  iyz="0.0"  izz="1.0" />
-    </inertial>
     <visual>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <origin xyz="0 1.3 0.28" rpy="0 0 0"/>
       <geometry>
         <mesh filename="package://room_description/meshes/beer_sized2.dae"/>
       </geometry>
       <material name="Green"/>
     </visual>
     <collision>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <origin xyz="0 1.3 0.28" rpy="0 0 0"/>
       <geometry>
         <mesh filename="package://room_description/meshes/beer_sized2.dae"/>
       </geometry>
@@ -343,20 +267,15 @@
   </joint>
         
   <link name="stuff_base">
-    <inertial>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="1.0" />
-      <inertia  ixx="1.0" ixy="0.0"  ixz="0.0"  iyy="100.0"  iyz="0.0"  izz="1.0" />
-    </inertial>
     <visual>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <origin xyz="1.1 -2.6 1.4" rpy="0 0 1.570796327"/>
       <geometry>
         <mesh filename="package://room_description/meshes/etagere_bois_sized2.dae"/>
       </geometry>
       <material name="Green"/>
     </visual>
     <collision>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <origin xyz="1.1 -2.6 1.4" rpy="0 0 1.570796327"/>
       <geometry>
         <mesh filename="package://room_description/meshes/etagere_bois_sized2.dae"/>
       </geometry>

@@ -10,8 +10,7 @@ Robot.urdfSuffix = '_capsule'
 Robot.srdfSuffix= '_capsule'
 
 robot = Robot ('hrp2_14')
-#robot.setJointBounds('base_joint_xyz', [-3, 3, -3, 3, 0, 1])
-robot.setJointBounds('base_joint_xyz', [-1, 1, -1, 1, 0.6, 0.7]) # MY
+robot.setJointBounds ('base_joint_xyz', [-4, 4, -4, 4, 0.6, 0.7])
 ps = ProblemSolver (robot)
 cl = robot.client
 Viewer.withFloor = True
@@ -79,3 +78,6 @@ cl.problem.optimizePath (2)
 cl.problem.directPath(q1,q2)
 from numpy import *
 argmin(cl.robot.distancesToCollision()[0])
+
+
+r( [0.5, -2.2, 0.64, 0.7071067812, 0, 0, -0.7071067812, 0.0, 0.0, 0.0, 0.0, 1.0, 0, -1.4, -1.0, 0.0, 0.0, 0.174532, -0.174532, 0.174532, -0.174532, 0.174532, -0.174532, 0.261799, -0.17453, 0.0, -0.523599, 0.0, 0.0, 0.174532, -0.174532, 0.174532, -0.174532, 0.174532, -0.174532, 0.0, 0.0, -0.453786, 0.872665, -0.418879, 0.0, 0.0, 0.0, -0.453786, 0.872665, -0.418879, 0.0])
