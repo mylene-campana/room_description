@@ -39,5 +39,41 @@ install(FILES urdf/room.urdf
 install(FILES urdf/walls.urdf
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/urdf
   )
-
+#meshes
+install(FILES meshes/bureauAngulaire_sized.dae
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/meshes
+  )
+install(FILES meshes/pc_portable_sized2.dae
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/meshes
+  )
+install(FILES meshes/lampe_a_pied_sized2.dae
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/meshes
+  )
+install(FILES meshes/fauteuil_sized2.dae
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/meshes
+  )
+install(FILES meshes/chaise_bureau2_sized2.dae
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/meshes
+  )
+install(FILES meshes/table_verre_sized.dae
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/meshes
+  )
+install(FILES meshes/commode_sized2.dae
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/meshes
+  )
+install(FILES meshes/vieux_livres_sized.dae
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/meshes
+  )
+install(FILES meshes/desklamp_sized2.dae
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/meshes
+  )
+install(FILES meshes/beer_sized2.dae
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/meshes
+  )
+install(FILES meshes/etagere_bois_sized2.dae
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/meshes
+  )
+install(FILES meshes/table1.dae
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/meshes
+  )
 SETUP_PROJECT_FINALIZE()
