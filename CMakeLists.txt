@@ -73,7 +73,4 @@ install(FILES meshes/beer_sized2.dae
 install(FILES meshes/etagere_bois_sized2.dae
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/meshes
   )
-install(FILES meshes/table1.dae
-  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/meshes
-  )
 SETUP_PROJECT_FINALIZE()
