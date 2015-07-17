@@ -43,6 +43,9 @@ install(FILES urdf/walls.urdf
 install(FILES meshes/bureauAngulaire_sized.dae
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/meshes
   )
+install(FILES meshes/bureau_angulaire.dae
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/meshes
+  )
 install(FILES meshes/pc_portable_sized2.dae
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/meshes
   )
@@ -70,7 +73,46 @@ install(FILES meshes/desklamp_sized2.dae
 install(FILES meshes/beer_sized2.dae
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/meshes
   )
+install(FILES meshes/beer_bottle.dae
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/meshes
+  )
+#install(FILES meshes/alcohol_1_beer2(1).png
+#  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/meshes
+#  )
 install(FILES meshes/etagere_bois_sized2.dae
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/meshes
   )
+install(FILES meshes/etagere_bois.dae
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/meshes
+  )
+
+install(FILES meshes/table_basse.dae
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/meshes
+  )
+#install(FILES meshes/Wood_700_x_466_px_290214_fg_(copy).jpg
+#  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/meshes
+#  )
+
+install(FILES meshes/carpet.dae
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/meshes
+  )
+install(FILES meshes/wall_carpet.dae
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/meshes
+  )
+install(FILES meshes/table_basse_truquee.dae
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/meshes
+  )
+
+install(FILES urdf/squel.urdf
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/urdf
+  )
+
+install(FILES srdf/squel.srdf
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/srdf
+  )
+
+install (FILES
+  src/hpp/corbaserver/squel_robot/robot.py
+  src/hpp/corbaserver/squel_robot/__init__.py
+  DESTINATION ${PYTHON_SITELIB}/hpp/corbaserver/squel_robot)
 SETUP_PROJECT_FINALIZE()
