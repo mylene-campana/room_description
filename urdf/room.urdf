@@ -27,12 +27,6 @@
       </geometry>
       <material name="Red"/>
     </visual>
-    <collision>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <geometry>
-        <box size="0 0 0"/>
-      </geometry>
-    </collision>
   </link>
   
   <joint name="j_desk" type="fixed">
