@@ -84,13 +84,13 @@
         
   <link name="lamp_base">
     <visual>
-      <origin xyz="-0.4 -2.3 0" rpy="0 0 0"/>
+      <origin xyz="-0.4 -2.3 0.04" rpy="0 0 0"/>
       <geometry>
         <mesh filename="package://room_description/meshes/lampe_a_pied_sized2.dae"/>
       </geometry>
     </visual>
     <collision>
-      <origin xyz="-0.4 -2.3 0" rpy="0 0 0"/>
+      <origin xyz="-0.4 -2.3 0.04" rpy="0 0 0"/>
       <geometry>
         <mesh filename="package://room_description/meshes/lampe_a_pied_sized2.dae"/>
       </geometry>
@@ -128,13 +128,15 @@
         
   <link name="chair_base">
     <visual>
-      <origin xyz="1.3 -1.7 0" rpy="0 0 1.570796327"/>
+      <!-- <origin xyz="1.33 -1.78 0" rpy="0 0 1.570796327"/> -->
+      <origin xyz="0.13 -1.78 0.04" rpy="0 0 1.570796327"/> <!-- barckward -->
       <geometry>
         <mesh filename="package://room_description/meshes/chaise_bureau2_sized2.dae"/>
       </geometry>
     </visual>
     <collision>
-      <origin xyz="1.3 -1.7 0" rpy="0 0 1.570796327"/>
+      <!-- <origin xyz="1.33 -1.78 0" rpy="0 0 1.570796327"/> -->
+      <origin xyz="0.13 -1.78 0.04" rpy="0 0 1.570796327"/> <!-- barckward -->
       <geometry>
         <mesh filename="package://room_description/meshes/chaise_bureau2_sized2.dae"/>
       </geometry>
@@ -218,14 +220,14 @@
         
   <link name="deskLamp_base">
     <visual>
-      <origin xyz="2.6 -2.1 0.98" rpy="0 0 -1.570796327"/>
+      <origin xyz="2.6 -2.1 1.05" rpy="0 0 -1.570796327"/>
       <geometry>
         <mesh filename="package://room_description/meshes/desklamp_sized2.dae"/>
       </geometry>
       <material name="Black"/>
     </visual>
     <collision>
-      <origin xyz="2.6 -2.1 0.98" rpy="0 0 -1.570796327"/>
+      <origin xyz="2.6 -2.1 1.05" rpy="0 0 -1.570796327"/>
       <geometry>
         <mesh filename="package://room_description/meshes/desklamp_sized2.dae"/>
       </geometry>
